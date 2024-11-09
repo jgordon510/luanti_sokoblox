@@ -10,7 +10,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 9,
-  nextobjectid = 40,
+  nextobjectid = 52,
   properties = {},
   tilesets = {
     {
@@ -117,10 +117,10 @@ return {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 0, 0, 11, 0, 1, 1,
-            0, 0, 0, 0, 1, 1, 8, 0, 13, 13, 0, 0, 1, 0, 1, 10
+            1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+            1, 1, 1, 1, 12, 12, 0, 0, 9, 9, 0, 0, 11, 0, 1, 1,
+            1, 1, 1, 1, 1, 1, 8, 0, 13, 13, 0, 0, 1, 0, 1, 10
           }
         },
         {
@@ -147,18 +147,18 @@ return {
         {
           x = -48, y = -16, width = 16, height = 16,
           data = {
-            0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 0, 0, 1, 0, 1, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 1, 1, 1, 0, 1, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 8, 0,
+            12, 12, 1, 1, 1, 1, 0, 0, 12, 12, 0, 0, 1, 0, 1, 0,
+            0, 0, 0, 1, 1, 1, 0, 0, 10, 10, 1, 1, 1, 0, 1, 0,
+            0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 8, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+            0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 10, 10, 1,
+            0, 0, 1, 1, 1, 1, 1, 9, 1, 0, 0, 0, 0, 0, 1, 1,
+            0, 0, 1, 1, 1, 1, 1, 9, 1, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 11, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -321,6 +321,66 @@ return {
           properties = {
             ["bridge"] = { id = 35 }
           }
+        },
+        {
+          id = 43,
+          name = "",
+          type = "5",
+          shape = "rectangle",
+          x = -1408,
+          y = -576,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 42 }
+          }
+        },
+        {
+          id = 44,
+          name = "",
+          type = "5",
+          shape = "rectangle",
+          x = -1536,
+          y = -512,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 42 }
+          }
+        },
+        {
+          id = 48,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1312,
+          y = -288,
+          width = 32,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 50 }
+          }
+        },
+        {
+          id = 49,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1440,
+          y = -192,
+          width = 32,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 50 }
+          }
         }
       }
     },
@@ -425,6 +485,32 @@ return {
           y = -416,
           width = 32,
           height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 42,
+          name = "",
+          type = "5",
+          shape = "rectangle",
+          x = -1376,
+          y = -416,
+          width = 32,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 50,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1248,
+          y = -160,
+          width = 64,
+          height = 32,
           rotation = 0,
           visible = true,
           properties = {}
@@ -546,6 +632,74 @@ return {
             ["rot"] = 1,
             ["stance"] = 0
           }
+        },
+        {
+          id = 40,
+          name = "",
+          type = "5",
+          shape = "rectangle",
+          x = -1408,
+          y = -512,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["orientation"] = "standing",
+            ["rot"] = 4,
+            ["stance"] = 0
+          }
+        },
+        {
+          id = 41,
+          name = "",
+          type = "5",
+          shape = "rectangle",
+          x = -1504,
+          y = -576,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["orientation"] = "standing",
+            ["rot"] = 2,
+            ["stance"] = 0
+          }
+        },
+        {
+          id = 46,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1408,
+          y = -224,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["orientation"] = "standing",
+            ["rot"] = 3,
+            ["stance"] = 0
+          }
+        },
+        {
+          id = 47,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1344,
+          y = -224,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["orientation"] = "standing",
+            ["rot"] = 4,
+            ["stance"] = 0
+          }
         }
       }
     },
@@ -624,6 +778,36 @@ return {
           visible = true,
           properties = {
             ["bridge1"] = { id = 35 }
+          }
+        },
+        {
+          id = 45,
+          name = "6",
+          type = "6",
+          shape = "rectangle",
+          x = -1376,
+          y = -352,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge1"] = { id = 42 }
+          }
+        },
+        {
+          id = 51,
+          name = "7",
+          type = "7",
+          shape = "rectangle",
+          x = -1184,
+          y = -160,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge1"] = { id = 50 }
           }
         }
       }
