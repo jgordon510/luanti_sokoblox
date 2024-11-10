@@ -10,7 +10,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 9,
-  nextobjectid = 53,
+  nextobjectid = 59,
   properties = {},
   tilesets = {
     {
@@ -158,10 +158,10 @@ return {
             0, 0, 1, 1, 1, 1, 1, 9, 1, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 11, 1, 1, 1, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 11, 1, 1, 1, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
           }
         },
@@ -179,10 +179,10 @@ return {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
+            12, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 1, 0, 0, 0, 0,
+            1, 1, 9, 9, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
+            1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
           }
         }
@@ -194,7 +194,7 @@ return {
       id = 5,
       name = "Targets",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -381,6 +381,36 @@ return {
           properties = {
             ["bridge"] = { id = 50 }
           }
+        },
+        {
+          id = 55,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -1056,
+          y = -128,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 56 }
+          }
+        },
+        {
+          id = 57,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -960,
+          y = -96,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 56 }
+          }
         }
       }
     },
@@ -390,7 +420,7 @@ return {
       id = 6,
       name = "Bridges",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -510,6 +540,19 @@ return {
           x = -1248,
           y = -160,
           width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 56,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -896,
+          y = -128,
+          width = 96,
           height = 32,
           rotation = 0,
           visible = true,
@@ -692,18 +735,34 @@ return {
           }
         },
         {
-          id = 52,
+          id = 53,
           name = "",
           type = "7",
           shape = "rectangle",
-          x = -1120,
+          x = -1056,
+          y = -96,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["rot"] = 1,
+            ["stance"] = 2
+          }
+        },
+        {
+          id = 54,
+          name = "",
+          type = "7",
+          shape = "rectangle",
+          x = -960,
           y = -128,
           width = 64,
           height = 32,
           rotation = 0,
           visible = true,
           properties = {
-            ["rot"] = 3,
+            ["rot"] = 1,
             ["stance"] = 2
           }
         }
@@ -715,7 +774,7 @@ return {
       id = 8,
       name = "Checkpoints",
       class = "",
-      visible = false,
+      visible = true,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -814,6 +873,21 @@ return {
           visible = true,
           properties = {
             ["bridge1"] = { id = 50 }
+          }
+        },
+        {
+          id = 58,
+          name = "8",
+          type = "8",
+          shape = "rectangle",
+          x = -800,
+          y = -128,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge1"] = { id = 56 }
           }
         }
       }
