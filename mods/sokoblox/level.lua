@@ -10,7 +10,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 9,
-  nextobjectid = 52,
+  nextobjectid = 53,
   properties = {},
   tilesets = {
     {
@@ -158,9 +158,9 @@ return {
             0, 0, 1, 1, 1, 1, 1, 9, 1, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 11, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1, 9, 1, 1, 1, 1, 1, 0, 0, 11, 1, 1, 1, 1,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
           }
@@ -179,9 +179,9 @@ return {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
           }
@@ -194,7 +194,7 @@ return {
       id = 5,
       name = "Targets",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -390,7 +390,7 @@ return {
       id = 6,
       name = "Bridges",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,
@@ -543,7 +543,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 0,
             ["stance"] = 0
           }
@@ -560,7 +559,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 1,
             ["stance"] = 0
           }
@@ -577,7 +575,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 2,
             ["stance"] = 0
           }
@@ -594,7 +591,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 1,
             ["stance"] = 0
           }
@@ -611,7 +607,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 1,
             ["stance"] = 0
           }
@@ -628,7 +623,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 1,
             ["stance"] = 0
           }
@@ -645,7 +639,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 4,
             ["stance"] = 0
           }
@@ -662,7 +655,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 2,
             ["stance"] = 0
           }
@@ -679,7 +671,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 3,
             ["stance"] = 0
           }
@@ -696,9 +687,24 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["orientation"] = "standing",
             ["rot"] = 4,
             ["stance"] = 0
+          }
+        },
+        {
+          id = 52,
+          name = "",
+          type = "7",
+          shape = "rectangle",
+          x = -1120,
+          y = -128,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["rot"] = 3,
+            ["stance"] = 2
           }
         }
       }
@@ -709,7 +715,7 @@ return {
       id = 8,
       name = "Checkpoints",
       class = "",
-      visible = true,
+      visible = false,
       opacity = 1,
       offsetx = 0,
       offsety = 0,

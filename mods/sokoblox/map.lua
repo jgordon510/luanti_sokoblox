@@ -161,16 +161,33 @@ end
 map.setup_movers = function()
     local movers = level.layers[4].objects
     Sokoblox.movers = {}
+    
+    
     for _, data in pairs(movers) do
+        local stance = data.properties["stance"]
+        local pos = {x = data.x / 32, y = 9, z = -data.y / 32}
+        local pos2 = nil
+        local orientation = "standing"
+        if stance ~= 0 and stance ~= 1 then
+            pos = {x = data.x / 32, y = 9, z = -data.y / 32}
+            minetest.log(data.width)
+            if data.width == 64 then
+                pos2 = {x = data.x / 32 + 1, y = 9, z = -data.y / 32}
+                orientation = "horizontal_x"
+            else
+                pos2 = {x = data.x / 32 , y = 9, z = -data.y / 32 -1}
+                orientation = "horizontal_z"
+
+            end
+        end
         local mover = {
             id = data.id,
             level = tonumber(data.type),
-            pos = {
-                x = data.x / 32, y = 9, z = -data.y / 32
-            },
-            orientation = data.properties["orientation"],
+            pos = pos,
+            pos2 = pos2,
+            orientation = orientation,
             rot = data.properties["rot"],
-            stance = data.properties["stance"],
+            stance = stance,
         }
 
         Sokoblox.movers[data.id] = mover
