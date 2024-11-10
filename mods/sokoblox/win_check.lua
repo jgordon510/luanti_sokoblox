@@ -151,6 +151,7 @@ win_check.fall_detection = function()
     for _, mover in pairs(Sokoblox.movers) do
         local underNode = minetest.get_node(vector.add(mover.pos, below))
         if underNode.name == "air" then
+            minetest.log(dump(mover.pos))
             minetest.after(0.25, fault)
             minetest.spawn_falling_node(mover.pos)
             if mover.pos2 then
@@ -164,11 +165,15 @@ win_check.fall_detection = function()
         elseif mover.pos2 then
             local underNode1 = minetest.get_node(vector.add(mover.pos, below))
             if underNode1.name == "air" then
+            minetest.log("fault2")
+
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos)
             end
             local underNode2 = minetest.get_node(vector.add(mover.pos2, below))
             if underNode2.name == "air" then
+            minetest.log("fault3")
+
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos2)
             end

@@ -210,7 +210,9 @@ end
 
 movement.check_collision = function(id, dir, dim, box, dist)
     for other_id, other in pairs(Sokoblox.movers) do
-        if other_id ~= id then
+        local level = Sokoblox.movers[id].level
+        local other_level = other.level
+        if other_id ~= id and level == other_level then
             if other.pos then
                 collide(id, dist, box, other.pos, dim, dir, other_id)
             end
@@ -233,7 +235,6 @@ movement.plr_move = function(id, dir, dim)
     local dist = 1
 
     if tall then
-        minetest.log("thud1")
         minetest.sound_play("sokoblox_thud1", {
             gain = 0.15,                          
             pos = Sokoblox.movers[1].pos, 
@@ -273,6 +274,7 @@ movement.plr_move = function(id, dir, dim)
     Sokoblox.win_check.check()
     Sokoblox.win_check.checkpoints()
     Sokoblox.win_check.fall_detection()
+
 end
 
 return movement

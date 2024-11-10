@@ -170,7 +170,6 @@ map.setup_movers = function()
         local orientation = "standing"
         if stance ~= 0 and stance ~= 1 then
             pos = {x = data.x / 32, y = 9, z = -data.y / 32}
-            minetest.log(data.width)
             if data.width == 64 then
                 pos2 = {x = data.x / 32 + 1, y = 9, z = -data.y / 32}
                 orientation = "horizontal_x"

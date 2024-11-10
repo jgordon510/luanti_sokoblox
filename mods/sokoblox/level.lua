@@ -10,7 +10,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 9,
-  nextobjectid = 59,
+  nextobjectid = 62,
   properties = {},
   tilesets = {
     {
@@ -180,7 +180,7 @@ return {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
-            12, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 1, 0, 0, 0, 0,
+            12, 1, 1, 1, 1, 1, 1, 8, 1, 1, 11, 1, 0, 0, 0, 0,
             1, 1, 9, 9, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
             1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -385,7 +385,7 @@ return {
         {
           id = 55,
           name = "",
-          type = "6",
+          type = "7",
           shape = "rectangle",
           x = -1056,
           y = -128,
@@ -400,7 +400,7 @@ return {
         {
           id = 57,
           name = "",
-          type = "6",
+          type = "7",
           shape = "rectangle",
           x = -960,
           y = -96,
@@ -410,6 +410,21 @@ return {
           visible = true,
           properties = {
             ["bridge"] = { id = 56 }
+          }
+        },
+        {
+          id = 60,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -704,
+          y = -128,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge"] = { id = 61 }
           }
         }
       }
@@ -554,6 +569,19 @@ return {
           y = -128,
           width = 96,
           height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 61,
+          name = "",
+          type = "6",
+          shape = "rectangle",
+          x = -704,
+          y = -224,
+          width = 32,
+          height = 64,
           rotation = 0,
           visible = true,
           properties = {}
@@ -756,6 +784,22 @@ return {
           type = "7",
           shape = "rectangle",
           x = -960,
+          y = -128,
+          width = 64,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["rot"] = 1,
+            ["stance"] = 2
+          }
+        },
+        {
+          id = 59,
+          name = "",
+          type = "8",
+          shape = "rectangle",
+          x = -768,
           y = -128,
           width = 64,
           height = 32,
