@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="9" nextobjectid="62">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="9" nextobjectid="83">
  <editorsettings>
   <export target="../mods/sokoblox/level.lua" format="lua"/>
  </editorsettings>
@@ -90,15 +90,51 @@
 0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,0,
 10,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
 1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,
+1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,
+0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0,
 12,1,1,1,1,1,1,8,1,1,11,1,0,0,0,0,
 1,1,9,9,0,0,0,0,1,1,1,1,0,0,0,0,
 1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-16" y="-16" width="16" height="16">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,9,9,9,0,0,0,0,0,0,0,0,0,0,
+1,1,1,9,9,9,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,
+0,0,12,0,1,1,1,1,1,0,0,0,0,0,0,0,
+0,0,12,0,1,1,1,1,1,0,0,0,0,0,0,0,
+0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0
+</chunk>
+   <chunk x="-16" y="0" width="16" height="16">
+0,0,0,0,8,1,11,1,1,0,0,0,0,0,0,0,
+0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,
+11,1,1,1,0,0,0,0,0,1,1,1,11,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </chunk>
   </data>
@@ -179,6 +215,46 @@
     <property name="bridge" type="object" value="61"/>
    </properties>
   </object>
+  <object id="66" type="8" x="-416" y="-320" width="32" height="64">
+   <properties>
+    <property name="bridge" type="object" value="65"/>
+   </properties>
+  </object>
+  <object id="67" type="8" x="-384" y="-320" width="32" height="64">
+   <properties>
+    <property name="bridge" type="object" value="65"/>
+   </properties>
+  </object>
+  <object id="68" type="8" x="-352" y="-320" width="32" height="64">
+   <properties>
+    <property name="bridge" type="object" value="65"/>
+   </properties>
+  </object>
+  <object id="71" type="9" x="-320" y="0" width="32" height="32">
+   <properties>
+    <property name="bridge" type="object" value="73"/>
+   </properties>
+  </object>
+  <object id="72" type="9" x="-384" y="0" width="32" height="32">
+   <properties>
+    <property name="bridge" type="object" value="74"/>
+   </properties>
+  </object>
+  <object id="76" type="9" x="-128" y="128" width="32" height="32">
+   <properties>
+    <property name="bridge" type="object" value="75"/>
+   </properties>
+  </object>
+  <object id="77" type="9" x="-512" y="128" width="32" height="32">
+   <properties>
+    <property name="bridge" type="object" value="75"/>
+   </properties>
+  </object>
+  <object id="78" type="9" x="-448" y="-96" width="32" height="64">
+   <properties>
+    <property name="bridge" type="object" value="79"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#ffaa00" id="6" name="Bridges">
   <object id="12" type="3" x="-1120" y="-576" width="32" height="32"/>
@@ -192,6 +268,11 @@
   <object id="50" type="6" x="-1248" y="-160" width="64" height="32"/>
   <object id="56" type="6" x="-896" y="-128" width="96" height="32"/>
   <object id="61" type="6" x="-704" y="-224" width="32" height="64"/>
+  <object id="65" type="8" x="-352" y="-224" width="32" height="64"/>
+  <object id="73" type="6" x="-224" y="32" width="32" height="64"/>
+  <object id="74" type="6" x="-416" y="32" width="32" height="64"/>
+  <object id="75" type="6" x="-416" y="-96" width="32" height="64"/>
+  <object id="79" type="6" x="-768" y="-32" width="384" height="32"/>
  </objectgroup>
  <objectgroup color="#4621c2" id="2" name="Movers">
   <object id="1" name="1" type="1" x="-832" y="-480" width="32" height="32">
@@ -272,6 +353,42 @@
     <property name="stance" type="int" value="2"/>
    </properties>
   </object>
+  <object id="62" type="8" x="-640" y="-320" width="32" height="64">
+   <properties>
+    <property name="rot" type="int" value="1"/>
+    <property name="stance" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="63" type="8" x="-544" y="-320" width="32" height="64">
+   <properties>
+    <property name="rot" type="int" value="1"/>
+    <property name="stance" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="64" type="8" x="-480" y="-320" width="32" height="64">
+   <properties>
+    <property name="rot" type="int" value="1"/>
+    <property name="stance" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="70" type="9" x="-352" y="-64" width="32" height="64">
+   <properties>
+    <property name="rot" type="int" value="1"/>
+    <property name="stance" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="80" type="9" x="-192" y="128" width="64" height="32">
+   <properties>
+    <property name="rot" type="int" value="2"/>
+    <property name="stance" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="81" type="9" x="-480" y="128" width="64" height="32">
+   <properties>
+    <property name="rot" type="int" value="0"/>
+    <property name="stance" type="int" value="3"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup color="#55aaff" id="8" name="Checkpoints">
   <object id="15" name="4" type="4" x="-1152" y="-576" width="32" height="32">
@@ -310,6 +427,16 @@
   <object id="58" name="8" type="8" x="-800" y="-128" width="32" height="32">
    <properties>
     <property name="bridge1" type="object" value="56"/>
+   </properties>
+  </object>
+  <object id="69" name="9" type="9" x="-352" y="-160" width="32" height="32">
+   <properties>
+    <property name="bridge1" type="object" value="65"/>
+   </properties>
+  </object>
+  <object id="82" name="10" type="10" x="-800" y="-32" width="32" height="32">
+   <properties>
+    <property name="bridge1" type="object" value="79"/>
    </properties>
   </object>
  </objectgroup>
