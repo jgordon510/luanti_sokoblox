@@ -32,13 +32,15 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     end
     --todo reset all flags
     local level = 1
-    local stance =  0
-    local rot =  0
+    local stance = 0
+    local rot = 0
+    Sokoblox.map.clear_blocks()
     Sokoblox.map.setup_map({ x = 0, y = 9, z = 0 }, 100)
     -- setup player for the game
     Sokoblox.map.setup_movers()
     Sokoblox.map.setup_targets()
     Sokoblox.map.setup_checkpoints()
+
     for _, cp in pairs(Sokoblox.checkpoints) do
         cp.complete = false
         if cp.level == level then
@@ -46,13 +48,22 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
             Sokoblox.level = level
             Sokoblox.movers[1].level = level
             Sokoblox.start_pos = cp.pos
+            Sokoblox.start_rot = rot
+            Sokoblox.start_stance = stance
             Sokoblox.movers[1].pos = Sokoblox.start_pos
             Sokoblox.movers[1].stance = stance
             Sokoblox.movers[1].rot = rot
             Sokoblox.movers[1].orientation = "standing"
             Sokoblox.map.move_blocks()
+            local plr = minetest.get_player_by_name("singleplayer")
+            local meta = plr:get_meta()
+            meta:set_int("level", Sokoblox.level)
+            Sokoblox.movers[1].level = Sokoblox.level
+            meta:set_int("rot", rot)
+            meta:set_int("stance", stance)
         end
     end
+    win_check.checkpoints()
     return true
 end)
 
@@ -74,10 +85,10 @@ local function highlight_particle_effect(pos, color_n)
         texture = "sokoblox_particle_" .. color_n .. ".png",
         glow = 10,
     })
-    minetest.after(1, function() 
+    minetest.after(1, function()
         minetest.sound_play("sokoblox_twinkle", {
-            gain = 0.05,                          
-            pos = Sokoblox.movers[1].pos, 
+            gain = 0.05,
+            pos = Sokoblox.movers[1].pos,
         })
     end)
 end
@@ -88,8 +99,8 @@ local function show_activation(target, color_n, new)
 
     if new then
         minetest.sound_play("sokoblox_activate", {
-            gain = 0.5,                          
-            pos = Sokoblox.movers[1].pos, 
+            gain = 0.5,
+            pos = Sokoblox.movers[1].pos,
         })
     end
     if target.pos.b then
@@ -185,8 +196,8 @@ local function fault()
         end
     end
     minetest.sound_play("sokoblox_loss", {
-        gain = 0.3,                         
-        pos = Sokoblox.movers[1].pos, 
+        gain = 0.3,
+        pos = Sokoblox.movers[1].pos,
     })
 end
 
@@ -210,13 +221,11 @@ win_check.fall_detection = function()
         elseif mover.pos2 then
             local underNode1 = minetest.get_node(vector.add(mover.pos, below))
             if underNode1.name == "air" then
-
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos)
             end
             local underNode2 = minetest.get_node(vector.add(mover.pos2, below))
             if underNode2.name == "air" then
-
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos2)
             end
@@ -238,7 +247,7 @@ win_check.checkpoints = function()
                         local meta = plr:get_meta()
                         Sokoblox.level = cp.level
                         meta:set_int("level", Sokoblox.level)
-                        
+
                         Sokoblox.movers[1].level = Sokoblox.level
                         Sokoblox.start_pos = mover.pos
                         Sokoblox.start_rot = mover.rot
@@ -253,8 +262,8 @@ win_check.checkpoints = function()
                         highlight_particle_effect(vector.add(Sokoblox.movers[1].pos, { x = 0, y = 1, z = 0 }), 0)
                         Sokoblox.map.move_blocks()
                         minetest.sound_play("sokoblox_win", {
-                            gain = 0.5,                          
-                            pos = Sokoblox.movers[1].pos, 
+                            gain = 0.5,
+                            pos = Sokoblox.movers[1].pos,
                         })
                         if Sokoblox.level == LAST_LEVEL then
                             endGame("singleplayer")
