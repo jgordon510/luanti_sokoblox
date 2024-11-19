@@ -163,6 +163,9 @@ minetest.register_on_joinplayer(function(player)
     Sokoblox.movers[1].level = level
     map.setup_targets()
     map.setup_checkpoints()
+    if not Sokoblox.start_pos then
+        Sokoblox.start_pos = Sokoblox.movers[1].pos
+    end
     Sokoblox.movers[1].camera_pos = vector.add(Sokoblox.start_pos, CAMERA_OFFSET)
     enable_flight_and_hide_hud(player)
     -- place the block and update the camera
