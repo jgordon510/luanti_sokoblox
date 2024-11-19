@@ -1,4 +1,5 @@
 local win_check = {}
+local LAST_LEVEL = 16
 local function compare(pos1, pos2)
     local x1 = pos1.x
     local x2 = pos2.x
@@ -236,7 +237,7 @@ win_check.checkpoints = function()
                             gain = 0.5,                          
                             pos = Sokoblox.movers[1].pos, 
                         })
-                        if Sokoblox.level == 2 then
+                        if Sokoblox.level == LAST_LEVEL then
                             minetest.log("WIN MESSAGE HERE")
                             endGame("singleplayer")
                         end
