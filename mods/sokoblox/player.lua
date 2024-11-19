@@ -105,7 +105,7 @@ local function welcome(name)
     local text1 ="<style size=25><i>Sokoblox Luanti</i></style>"
     local text2 ="<style size=20>This is a rolling block puzzle game, similar to Bloxorz.  It is also a push block puzzle game similar to Sokoban.  The object of the game is to push the blocks onto the colored targets with the block showing the target's color on top.  When all the targets are covered, a bridge will open, allowing you to access the next level.</style>"
     local text3 ="<style size=20>In order to progress, you must finish on the checkpoint with the correct side up.</style>"
-    local text4 ="<style size=20>THIS GAME DOES NOT USE THE MOUSE.  Use WASD keys to move the player block. Moving the mouse will result in momentary jitter of the camera. this cannot be prevented.</style>"
+    local text4 ="<style size=20>THIS GAME DOES NOT USE THE MOUSE.  Use WASD keys to move the player block. Moving the mouse will result in momentary jitter of the camera. This cannot be prevented.</style>"
     local text5 ="<style size=20>I really enjoyed making this game.  I hope you enjoy playing it. Remember to take a break if you get frustrated.  I promise every puzzle is solvable.</style>"
     local text6 ="<style size=20>-codeAtorium</style>"
 
