@@ -1066,7 +1066,7 @@ return {
         {
           id = 165,
           name = "",
-          type = "14",
+          type = "15",
           shape = "rectangle",
           x = -1856,
           y = -96,
@@ -1081,7 +1081,7 @@ return {
         {
           id = 167,
           name = "",
-          type = "14",
+          type = "15",
           shape = "rectangle",
           x = -1856,
           y = -352,
@@ -1096,7 +1096,7 @@ return {
         {
           id = 168,
           name = "",
-          type = "14",
+          type = "15",
           shape = "rectangle",
           x = -1568,
           y = -352,
@@ -1111,7 +1111,7 @@ return {
         {
           id = 169,
           name = "",
-          type = "14",
+          type = "15",
           shape = "rectangle",
           x = -1568,
           y = -96,
@@ -1631,7 +1631,7 @@ return {
         {
           id = 166,
           name = "",
-          type = "14",
+          type = "15",
           shape = "rectangle",
           x = -1728,
           y = -416,
