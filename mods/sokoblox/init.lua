@@ -1,3 +1,4 @@
+assert(minetest.is_singleplayer(), "This game is intended for single player only!")
 Sokoblox = {}                                               --movers, targets, bridges, checkpoints, start_pos, start_rot, start_stance
 local path = minetest.get_modpath("sokoblox")
 dofile(path..'/nodes.lua')                                  --contains all the node registrations
