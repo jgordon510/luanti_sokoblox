@@ -30,7 +30,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     if formname ~= "sokoblox:congrats" then
         return false
     end
-    --todo reset all flags
     local level = 1
     local stance = 0
     local rot = 0
