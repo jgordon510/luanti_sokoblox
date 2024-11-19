@@ -2,6 +2,6 @@
 ## created for the 2024 Luanti Game Jam
 ### a rolling/push block puzzle game
 
-This game is a sequel to Sokoblox for Pico-8.  
+This is a puzzle game for the Luanti game engine.  It is a rolling block game, similar to Bloxorz.  It is also a push block game, similar to Sokoban.
 
-In order to complete a target, you must not only cover the target, but cover it with a block that has the same color on top.
+The object of the game is to cover the colored targets with a block that has the same color on top. Completing targets will open bridges, which allows access to further puzzles.
