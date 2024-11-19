@@ -30,7 +30,7 @@ local function highlight_particle_effect(pos, color_n)
     })
     minetest.after(1, function() 
         minetest.sound_play("sokoblox_twinkle", {
-            gain = 0.02,                          
+            gain = 0.05,                          
             pos = Sokoblox.movers[1].pos, 
         })
     end)
