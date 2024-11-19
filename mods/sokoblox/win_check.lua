@@ -34,13 +34,9 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     local level = 1
     local stance = 0
     local rot = 0
+    Sokoblox.level = LAST_LEVEL - 1
     Sokoblox.map.clear_blocks()
-    Sokoblox.map.setup_map({ x = 0, y = 9, z = 0 }, 100)
-    -- setup player for the game
-    Sokoblox.map.setup_movers()
-    Sokoblox.map.setup_targets()
-    Sokoblox.map.setup_checkpoints()
-
+    Sokoblox.level = LAST_LEVEL
     for _, cp in pairs(Sokoblox.checkpoints) do
         cp.complete = false
         if cp.level == level then
@@ -63,6 +59,12 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
             meta:set_int("stance", stance)
         end
     end
+    
+    Sokoblox.map.setup_map({ x = 0, y = 9, z = 0 }, 100)
+    -- setup player for the game
+    Sokoblox.map.setup_movers()
+    Sokoblox.map.setup_targets()
+    Sokoblox.map.setup_checkpoints()
     win_check.checkpoints()
     return true
 end)
