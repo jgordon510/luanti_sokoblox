@@ -102,15 +102,32 @@ end
 
 local function welcome(name)
     -- Define your styled text
-    local text1 ="<style size=25><i>Sokoblox Luanti</i></style>"
-    local text2 ="<style size=20>This is a rolling block puzzle game, similar to Bloxorz.  It is also a push block puzzle game similar to Sokoban.  The object of the game is to push the blocks onto the colored targets with the block showing the target's color on top.  When all the targets are covered, a bridge will open, allowing you to access the next level.</style>"
-    local text3 ="<style size=20>In order to progress, you must finish on the checkpoint with the correct side up.</style>"
-    local text4 ="<style size=20>THIS GAME DOES NOT USE THE MOUSE.  Use WASD keys to move the player block. Moving the mouse will result in momentary jitter of the camera. This cannot be prevented.</style>"
-    local text5 ="<style size=20>I really enjoyed making this game.  I hope you enjoy playing it. Remember to take a break if you get frustrated.  I promise every puzzle is solvable.</style>"
-    local text6 ="<style size=20>-codeAtorium</style>"
+    local text = {}
+    text[1] ="<style size=30>Sokoblox Luanti</style>"
+    text[2] ="<style size=20>This is a rolling block puzzle game, similar to Bloxorz.  It is also a push block puzzle game similar to Sokoban.  The object of the game is to push the blocks onto the colored targets with the block showing the target's color on top.  When all the targets are covered, a bridge will open, allowing you to access the next level.</style>"
+    text[3] ="<style size=20>In order to progress, you must finish on the checkpoint with the correct side up.</style>"
+    text[4] ="<style size=20>THIS GAME DOES NOT USE THE MOUSE.  Use WASD keys to move the player block. Moving the mouse will result in momentary jitter of the camera. This cannot be prevented.</style>"
+    text[5] = "<style size=20>Blocks can also push eachother. Pushing the other blocks from different stances and distances will produce different results:</style>"
+    text[6] ="<img name=\"push1.png\" width=450 height=200>"
+    text[7] ="<img name=\"push2.png\" width=450 height=200>"
+    text[8] ="<img name=\"push3.png\" width=450 height=200>"
+    text[9] ="<img name=\"push4.png\" width=450 height=200>"
+    text[10] = "<style size=20>The color order as seen from both sides:</style>"
+    text[11] ="<img name=\"roll1.png\" width=500 height=500>"
+    text[12] ="<img name=\"roll2.png\" width=500 height=500>"
+    text[13] = "<style size=20>When blocks roll against other flat blocks, the second block will roll in the opposite directions, like gears, or logs on a river:</style>"
+    text[14] ="<img name=\"logroll1.png\" width=450 height=200>"
+    text[15] = "<style size=20>With more blocks, the alternating pattern continues:</style>"
+    text[16] ="<img name=\"logroll2.png\" width=500 height=500>"
+    text[17] ="<style size=20>I really enjoyed making this game.  I hope you enjoy playing it. Remember to take a break if you get frustrated.  I promise every puzzle is solvable.</style>"
+    text[18] ="<style size=25><i>-codeAtorium</i></style>"
 
     -- Combine the text using the hypertext element
-    local hypertext = "hypertext[0.5,0.5;11.5,7;;" .. text1 .. "\n\n" .. text2 .. "\n\n" .. text3 .."\n\n" .. text4 .."\n\n" .. text5 .."\n\n" .. text6 .."\n\n" .. "]"
+    local hypertext = "hypertext[0.5,0.5;11.5,7;;" 
+    for _, str in pairs(text) do
+        hypertext = hypertext .. str .. "\n\n"
+    end
+    hypertext = hypertext .."]"
     minetest.show_formspec(name, "sokoblox:welcome",
         "size[12,8]" ..
         hypertext ..
