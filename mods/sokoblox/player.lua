@@ -100,6 +100,23 @@ local function enable_flight_and_hide_hud(player)
     
 end
 
+local function welcome(name)
+    -- Define your styled text
+    local text1 ="<style size=25><i>Sokoblox Luanti</i></style>"
+    local text2 ="<style size=20>This is a rolling block puzzle game, similar to Bloxorz.  It is also a push block puzzle game similar to Sokoban.  The object of the game is to push the blocks onto the colored targets with the block showing the target's color on top.  When all the targets are covered, a bridge will open, allowing you to access the next level.</style>"
+    local text3 ="<style size=20>In order to progress, you must finish on the checkpoint with the correct side up.</style>"
+    local text4 ="<style size=20>THIS GAME DOES NOT USE THE MOUSE.  Use WASD keys to move the player block. Moving the mouse will result in momentary jitter of the camera. this cannot be prevented.</style>"
+    local text5 ="<style size=20>I really enjoyed making this game.  I hope you enjoy playing it. Remember to take a break if you get frustrated.  I promise every puzzle is solvable.</style>"
+    local text6 ="<style size=20>-codeAtorium</style>"
+
+    -- Combine the text using the hypertext element
+    local hypertext = "hypertext[0.5,0.5;11.5,7;;" .. text1 .. "\n\n" .. text2 .. "\n\n" .. text3 .."\n\n" .. text4 .."\n\n" .. text5 .."\n\n" .. text6 .."\n\n" .. "]"
+    minetest.show_formspec(name, "sokoblox:welcome",
+        "size[12,8]" ..
+        hypertext ..
+        "button_exit[4.5,7;2,1;exit;Begin]")
+end
+
 -- start the game when a player joins
 minetest.register_on_joinplayer(function(player)
     -- setup the map area (e.g., a 100x100 area centered around y = 8)
@@ -119,6 +136,11 @@ minetest.register_on_joinplayer(function(player)
         Sokoblox.start_stance = meta:get_int("stance")
         Sokoblox.movers[1].rot = Sokoblox.start_rot
         Sokoblox.movers[1].stance = Sokoblox.start_stance
+    end
+    
+    if meta:get_int("welcomed") == 0 then
+        meta:set_int("welcomed", 1)
+        welcome("singleplayer")
     end
     Sokoblox.level = level
     Sokoblox.movers[1].level = level
