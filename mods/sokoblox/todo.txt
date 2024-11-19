@@ -1,9 +1,0 @@
-x move to game
-x make textures
-x targets - 6 kinds (4 doubles; 2 singles)
-x bridges linked to targets
-x fall detection and respawn
-x checkpoints
-x teleport command
-level design
-endgame
