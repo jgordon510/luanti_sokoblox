@@ -5,4 +5,4 @@ Sokoblox.map = dofile(path.."/map.lua")                     --contains map setup
 Sokoblox.movement = dofile(path.."/movement.lua")           --collision and rolling
 dofile(path.."/player.lua")                                 --player join, keycheck, camera movement
 Sokoblox.win_check = dofile(path.."/win_check.lua")         --faults, targets, checkpoints
-dofile(path.."/commands.lua")                               --debug/dev commands
+--dofile(path.."/commands.lua")                               --debug/dev commands

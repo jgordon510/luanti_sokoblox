@@ -30,7 +30,31 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     if formname ~= "sokoblox:congrats" then
         return false
     end
+    minetest.log("resetting...")
     --todo reset all flags
+    local level = 1
+    local stance =  0
+    local rot =  0
+    Sokoblox.map.setup_map({ x = 0, y = 9, z = 0 }, 100)
+    -- setup player for the game
+    Sokoblox.map.setup_movers()
+    Sokoblox.map.setup_targets()
+    Sokoblox.map.setup_checkpoints()
+    for _, cp in pairs(Sokoblox.checkpoints) do
+        cp.complete = false
+        if cp.level == level then
+            minetest.log("found new level")
+            Sokoblox.map.clear_blocks()
+            Sokoblox.level = level
+            Sokoblox.movers[1].level = level
+            Sokoblox.start_pos = cp.pos
+            Sokoblox.movers[1].pos = Sokoblox.start_pos
+            Sokoblox.movers[1].stance = stance
+            Sokoblox.movers[1].rot = rot
+            Sokoblox.movers[1].orientation = "standing"
+            Sokoblox.map.move_blocks()
+        end
+    end
     return true
 end)
 

@@ -10,7 +10,7 @@ return {
   tilewidth = 32,
   tileheight = 32,
   nextlayerid = 9,
-  nextobjectid = 176,
+  nextobjectid = 177,
   properties = {},
   tilesets = {
     {
@@ -2635,6 +2635,21 @@ return {
           visible = true,
           properties = {
             ["bridge1"] = { id = 166 }
+          }
+        },
+        {
+          id = 176,
+          name = "1",
+          type = "1",
+          shape = "rectangle",
+          x = -832,
+          y = -480,
+          width = 32,
+          height = 32,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["bridge1"] = { id = 0 }
           }
         }
       }
