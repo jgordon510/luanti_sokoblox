@@ -10,6 +10,29 @@ local function compare(pos1, pos2)
     return false
 end
 
+local function endGame(name)
+    -- Define your styled text
+    local text1 = "<style size=30><b>Congratulations!</b></style>"
+    local text2 =
+    "<style size=20>You've completed all of the puzzles in the game! Thank you for playing, and please leave a review on the content database if you enjoyed playing the game!</style>"
+    local text3 = "<style size=20>Press the button below to restart the game from the beginning!</style>"
+    -- Combine the text using the hypertext element
+    local hypertext = "hypertext[0.5,0.5;7,6;;" .. text1 .. "\n\n" .. text2 .. "\n\n" .. text3 .. "]"
+    minetest.show_formspec(name, "sokoblox:congrats",
+        "size[8,8]" ..
+        hypertext ..
+        "button_exit[3,7;2,1;exit;Restart]")
+end
+
+-- Register callback for endGame formspec
+minetest.register_on_player_receive_fields(function(player, formname, fields)
+    if formname ~= "sokoblox:congrats" then
+        return false
+    end
+    --todo reset all flags
+    return true
+end)
+
 local function highlight_particle_effect(pos, color_n)
     minetest.add_particlespawner({
         amount = 70,
@@ -213,6 +236,10 @@ win_check.checkpoints = function()
                             gain = 0.5,                          
                             pos = Sokoblox.movers[1].pos, 
                         })
+                        if Sokoblox.level == 2 then
+                            minetest.log("WIN MESSAGE HERE")
+                            endGame("singleplayer")
+                        end
                     end
                 end
             end
