@@ -30,7 +30,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     if formname ~= "sokoblox:congrats" then
         return false
     end
-    minetest.log("resetting...")
     --todo reset all flags
     local level = 1
     local stance =  0
@@ -43,7 +42,6 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
     for _, cp in pairs(Sokoblox.checkpoints) do
         cp.complete = false
         if cp.level == level then
-            minetest.log("found new level")
             Sokoblox.map.clear_blocks()
             Sokoblox.level = level
             Sokoblox.movers[1].level = level
@@ -199,7 +197,6 @@ win_check.fall_detection = function()
     for _, mover in pairs(Sokoblox.movers) do
         local underNode = minetest.get_node(vector.add(mover.pos, below))
         if underNode.name == "air" then
-            minetest.log(dump(mover.pos))
             minetest.after(0.25, fault)
             minetest.spawn_falling_node(mover.pos)
             if mover.pos2 then
@@ -213,14 +210,12 @@ win_check.fall_detection = function()
         elseif mover.pos2 then
             local underNode1 = minetest.get_node(vector.add(mover.pos, below))
             if underNode1.name == "air" then
-            minetest.log("fault2")
 
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos)
             end
             local underNode2 = minetest.get_node(vector.add(mover.pos2, below))
             if underNode2.name == "air" then
-            minetest.log("fault3")
 
                 minetest.after(0.25, fault)
                 minetest.spawn_falling_node(mover.pos2)
@@ -262,7 +257,6 @@ win_check.checkpoints = function()
                             pos = Sokoblox.movers[1].pos, 
                         })
                         if Sokoblox.level == LAST_LEVEL then
-                            minetest.log("WIN MESSAGE HERE")
                             endGame("singleplayer")
                         end
                     end
