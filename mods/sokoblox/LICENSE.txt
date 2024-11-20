@@ -1,6 +1,12 @@
 All media and source code is published under a CC0 1.0 Universal license unless noted
 below.
 
+Sources for audio:
+sokoblox_activate, sokoblox_loss, and sokoblox_win are by wobbleboxx https://opengameart.org/content/level-up-power-up-coin-get-13-sounds
+sokoblox_thud1 is by NenadSimic https://opengameart.org/content/muffled-distant-explosion
+sokoblox_twinkle is by Kevin McAuliffe who made it for this project
+sokoblox_thud2 and sokoblox_thud3 were created by me from sokoblox_thud1 (see above)
+
 https://creativecommons.org/publicdomain/zero/1.0/
 
 No Copyright
